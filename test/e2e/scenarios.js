@@ -65,17 +65,17 @@ describe('CarInv App', function() {
     });
 
 
-    it('should display the first car image as the main car image', function() {
-      expect(element('img.car').attr('src')).toBe('img/cars/nexus-s.0.jpg');
-    });
+//    it('should display the first car image as the main car image', function() {
+//      expect(element('img.car').attr('src')).toBe('img/cars/nexus-s.0.jpg');
+//    });
 
 
-    it('should swap main image if a thumbnail image is clicked on', function() {
-      element('.car-thumbs li:nth-child(3) img').click();
-      expect(element('img.car').attr('src')).toBe('img/cars/nexus-s.2.jpg');
-
-      element('.car-thumbs li:nth-child(1) img').click();
-      expect(element('img.car').attr('src')).toBe('img/cars/nexus-s.0.jpg');
-    });
+//    it('should swap main image if a thumbnail image is clicked on', function() {
+//      element('.car-thumbs li:nth-child(3) img').click();
+//      expect(element('img.car').attr('src')).toBe('img/cars/nexus-s.2.jpg');
+//
+//      element('.car-thumbs li:nth-child(1) img').click();
+//      expect(element('img.car').attr('src')).toBe('img/cars/nexus-s.0.jpg');
+//    });
   });
 });
