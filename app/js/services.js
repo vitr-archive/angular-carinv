@@ -2,8 +2,15 @@
 
 /* Services */
 
-
-// Demonstrate how to register services
-// In this case it is a simple value service.
-angular.module('myApp.services', []).
-  value('version', '0.1');
+angular.module('carinvServices', ['ngResource']).
+    factory('Car', function($resource){
+    var data = $resource('cars/:carId.json', {}, {
+        query: {method:'GET', params:{carId:'cars'}, isArray:true}
+      });
+//    data.query(function(data){
+//                    console.log(data.length);
+//                }, function(err){
+//                    alert('request failed');
+//                });
+  return data;
+});
